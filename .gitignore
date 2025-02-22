@@ -1,0 +1,6 @@
+.idea/
+.venv/
+
+
+Action-Recognition-Dataset/
+raw-coordinates.csv
