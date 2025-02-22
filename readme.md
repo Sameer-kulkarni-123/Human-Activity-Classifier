@@ -1,9 +1,11 @@
-the original data set has been renamed to Action-Recognition-Dataset
+Get the original dataset from the ppt guy
+
+the original data set has been renamed to Action-Recognition-Dataset and move it to this project's root folder
 
 the folders inside the Action-Recognition-Dataset/source-images3 have to be renamed to jump_1, jump_2, kick_1, ...etc
 
 
-DO THE ABOVE STEP AND FOLLOW THE BELOW EXCEPTIONS:KJ
+DO THE ABOVE STEP AND FOLLOW THE BELOW EXCEPTIONS:
 
 
 there are 4 folders for "stand" but in valid_images.txt there are 5 entries for stand, stand3 has been repeated twice:
