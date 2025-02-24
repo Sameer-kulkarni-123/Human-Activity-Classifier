@@ -1,6 +1,10 @@
 .idea/
 .venv/
+model/
 
 
 Action-Recognition-Dataset/
 raw-coordinates.csv
+new_raw_co-ordinates.csv
+testImg.jpg
+createLabels.py

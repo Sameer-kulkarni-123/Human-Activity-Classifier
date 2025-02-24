@@ -15,11 +15,9 @@ import mediapipe as mp
 
 # Grabbing the Holistic Model from Mediapipe and
 # Initializing the Model
-mp_holistic = mp.solutions.holistic
-holistic_model = mp_holistic.Holistic(
-	min_detection_confidence=0.5,
-	min_tracking_confidence=0.5
-)
+# mp_holistic = mp.solutions.holistic
+mp_pose = mp.solutions.pose
+holistic_model = mp_pose.Pose(static_image_mode=True, min_detection_confidence=0.5)
 
 # Initializing the drawing utils for drawing the facial landmarks on image
 mp_drawing = mp.solutions.drawing_utils
@@ -54,26 +52,8 @@ while capture.isOpened():
 	# Drawing the Facial Landmarks
 	mp_drawing.draw_landmarks(
 	image,
-	results.face_landmarks,
-	mp_holistic.FACEMESH_CONTOURS,
-	mp_drawing.DrawingSpec(
-		color=(255,0,255),
-		thickness=1,
-		circle_radius=1
-	),
-	mp_drawing.DrawingSpec(
-		color=(0,255,255),
-		thickness=1,
-		circle_radius=1
-	)
-	)
-
-
-
-	mp_drawing.draw_landmarks(
-	image,
 	results.pose_landmarks,
-	mp_holistic.POSE_CONNECTIONS
+	mp_pose.POSE_CONNECTIONS
 	)
 
 

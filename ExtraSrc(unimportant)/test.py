@@ -22,16 +22,16 @@ if createFile:
       file.write(landmark_names[i] + ", ")
     file.write("\n")
 
-currImagePath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../Action-Recognition-Dataset/source_images3/jump_2/00348.jpg")
+currImagePath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../Action-Recognition-Dataset/source_images3/jump_2/00010.jpg")
 
 currImage = cv2.imread(currImagePath)
 results = pose.process(currImage)
-if results.pose_landmarks:
-  mp_drawing.draw_landmarks(currImage, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
-  skels_coors = results.pose_landmarks.landmark
-  cv2.imshow(currImagePath, currImage)
-  cv2.waitKey(000)
-  cv2.destroyAllWindows()
+# if results.pose_landmarks:
+mp_drawing.draw_landmarks(currImage, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
+# skels_coors = results.pose_landmarks.landmark
+cv2.imshow(currImagePath, currImage)
+cv2.waitKey(000)
+cv2.destroyAllWindows()
 print("passed")
 
 # skels_coors = results.pose_landmarks.landmark
