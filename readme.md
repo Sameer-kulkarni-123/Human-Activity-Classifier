@@ -8,7 +8,7 @@
 
 - The folders inside the Action-Recognition-Dataset/source-images3 have to be renamed to jump_1, jump_2, kick_1, ...etc
 
-![Folder Structure Image](ExtraSrc(unimportant)/readmeFolderStructure.png)
+![Folder Structure Image](ExtraSrc/readmeFolderStructure.png)
 
 ### COMPLETE THE ABOVE STEPS AND CONTINUE
 
