@@ -3,6 +3,9 @@
 model/
 raw_skels/
 testImgs/
+imagesFromVids/
+ExtraSrc(unimportant)/
+videos/
 
 
 Action-Recognition-Dataset/
