@@ -3,7 +3,6 @@ import cv2
 import numpy as np
 import os
 import joblib
-from sklearn.preprocessing import LabelEncoder, StandardScaler
 
 
 #finding the path of the folder model
