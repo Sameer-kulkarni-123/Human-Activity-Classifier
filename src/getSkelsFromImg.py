@@ -36,6 +36,9 @@ validimg_path = os.path.join(script_dir, "../Action-Recognition-Dataset/source_i
 validimg = open(validimg_path, "r")
 # test = open("../context.txt", "r")
 
+raw_skels_path = os.path.join(script_dir, "../raw_skels")
+os.makedirs(raw_skels_path, exist_ok=True)
+
 action_label = ""
 
 for line in validimg:

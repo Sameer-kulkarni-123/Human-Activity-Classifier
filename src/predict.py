@@ -13,7 +13,9 @@ pkl_path = os.path.join(script_dir, "../model")
 # currImage = cv2.imread(f"{script_dir}/../testImgs/manStanding.jpg")
 # currImage = cv2.imread(f"{script_dir}/../testImgs/manRunning.jpg")
 # currImage = cv2.imread(f"{script_dir}/../testImgs/manSitting.jpg")
-# currImage = cv2.imread(f"{script_dir}/../testImgs/00113.jpg")
+currImage = cv2.imread(f"{script_dir}/../testImgs/00113.jpg")
+# currImage = cv2.imread(f"{script_dir}/../testImgs/humanKick.jpg")
+# currImage = cv2.imread(f"{script_dir}/../testImgs/humanWave.jpg")
 # currImage = cv2.imread(f"{script_dir}/../testImgs/testImg5.jpg")
 
 
