@@ -2,6 +2,8 @@ import cv2
 import mediapipe as mp
 import re
 import os
+import pandas as pd
+
 
 mp_pose = mp.solutions.pose
 mp_drawing = mp.solutions.drawing_utils
@@ -15,7 +17,7 @@ landmark_names = str.split(", ")
 csv_filename="raw-coordinates.csv"
 
 createFile = 0
-createFile = 1 #uncomment this line to create the csv file
+# createFile = 1 #uncomment this line to create the csv file
 if createFile:
   with open(csv_filename, "a") as file:
     for i in range(len(landmark_names)):
@@ -59,9 +61,24 @@ for line in validimg:
 
       if results.pose_landmarks:
         skels_coors = results.pose_landmarks.landmark
-        with open(csv_filename, "a") as file:
+        with open(f"{script_dir}/../raw_skels/{csv_filename}", "a") as file:
           file.write(action_label + "_" + padded_num+ ", ")
           for bodyPoint in range(len(skels_coors)):
             point = skels_coors[bodyPoint]
             file.write(f"{point.x}, {point.y}, {point.z}, ")
           file.write("\n")
+
+df = pd.read_csv(f"{script_dir}/../raw_skels/raw-coordinates.csv")
+df = df.drop(df.columns[-1], axis=1)
+
+pattern = re.compile(r"(jump|kick|punch|run|sit|squat|stand|walk|wave)")
+Y = []
+
+for filename in df["file_name"]:
+  if pattern.match(filename):
+    match = pattern.match(filename)
+    Y.append(match.group())
+
+# print(Y)
+df["label"] = Y
+df.to_csv("new_raw_co-ordinates.csv", index=False)    

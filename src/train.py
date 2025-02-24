@@ -9,39 +9,40 @@ import cv2
 import joblib
 import os
 
+#getting the pwd of the script
+script_dir = os.path.dirname(os.path.abspath(__file__))  # Get the directory of the script
+pkl_path = os.path.join(script_dir, "../model")
 
+#reading the file from dir raw_skels
+df = pd.read_csv(f"{script_dir}/../raw_skels/new_raw_co-ordinates.csv")
 
-
-df = pd.read_csv("new_raw_co-ordinates.csv")
-cordsArray = df.iloc[:, 1:-1].values
+#getting the X and Y features from the csv
+X = df.iloc[:, 1:-1].values
 Y = df["label"].values
+
+
+#initializing the model and preprocessing tools
 label_encoder = LabelEncoder()
-encoded_labels = label_encoder.fit_transform(Y)
-
-
-all_labels=["jump", "kick", "punch", "run", "sit", "squat", "stand", "walk", "wave"]
-
 standard_scaler = StandardScaler()
-standardized_X = standard_scaler.fit_transform(cordsArray)
-print(standardized_X.shape)
-
 pca = PCA(n_components=.95)
+model = MLPClassifier(hidden_layer_sizes=(20, 30, 40), max_iter=500)
+
+
+#preforming preprocessing and label encoding
+encoded_labels = label_encoder.fit_transform(Y)
+standardized_X = standard_scaler.fit_transform(X)
 reduced_X = pca.fit_transform(standardized_X)
-print(reduced_X.shape)
 
 
 X_train, X_test, Y_train, Y_test = train_test_split(reduced_X, encoded_labels, test_size=0.2, random_state=42)
-print(X_train)
-model = MLPClassifier(hidden_layer_sizes=(20, 30, 40), max_iter=500)
 model.fit(X_train, Y_train)
 
 
 
-script_dir = os.path.dirname(os.path.abspath(__file__))  # Get the directory of the script
-pkl_path = os.path.join(script_dir, "../model")
+
 os.makedirs(pkl_path, exist_ok=True)
 
-
+#run to create a .pkl file of the models
 if False: # change to True to create the models
   joblib.dump(model, f"{pkl_path}/mlp_model.pkl")
   joblib.dump(label_encoder, f"{pkl_path}/label_encoder_model.pkl")

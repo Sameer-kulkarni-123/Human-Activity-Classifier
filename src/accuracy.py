@@ -18,7 +18,7 @@ loaded_model = joblib.load(f"{pkl_path}/mlp_model.pkl")
 label_encoded_loaded_model = joblib.load(f"{pkl_path}/label_encoder_model.pkl")
 
 
-df = pd.read_csv("new_raw_co-ordinates.csv")
+df = pd.read_csv(f"{script_dir}/../raw_skels/new_raw_co-ordinates.csv")
 cordsArray = df.iloc[:, 1:-1].values
 Y = df["label"].values
 label_encoder = LabelEncoder()

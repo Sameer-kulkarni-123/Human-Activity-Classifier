@@ -1,10 +1,9 @@
 .idea/
 .venv/
 model/
+raw_skels/
+testImgs/
 
 
 Action-Recognition-Dataset/
-raw-coordinates.csv
-new_raw_co-ordinates.csv
-testImg.jpg
 createLabels.py
