@@ -1,3 +1,4 @@
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder, StandardScaler
@@ -16,9 +17,9 @@ from sklearn.metrics import roc_auc_score, roc_curve
 script_dir = os.path.dirname(os.path.abspath(__file__))  # Get the directory of the script
 pkl_path = os.path.join(script_dir, "../model")
 
-standard_scaler_model = joblib.load(f"{pkl_path}/standard_scaler_model1.pkl")
-loaded_model = joblib.load(f"{pkl_path}/mlp_model1.pkl")
-label_encoded_loaded_model = joblib.load(f"{pkl_path}/label_encoder_model1.pkl")
+standard_scaler_model = joblib.load(f"{pkl_path}/standard_scaler_model2.pkl")
+loaded_model = joblib.load(f"{pkl_path}/mlp_model2.pkl")
+label_encoded_loaded_model = joblib.load(f"{pkl_path}/label_encoder_model2.pkl")
 
 
 df = pd.read_csv(f"{script_dir}/../raw_skels/new_raw_co-ordinates1.csv")
@@ -57,3 +58,9 @@ print(f"accuracy : {accuracy:.4f}")
 print(f"precision : {precision:.4f}")
 print(f"recall : {recall:.4f}")
 print(f"f1_score : {f1:.4f}")
+
+cm = confusion_matrix(Y_test, Y_predict)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm)
+disp.plot(cmap='Blues')
+plt.title("Confusion Matrix")
+plt.show()

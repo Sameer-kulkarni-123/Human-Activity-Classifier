@@ -8,6 +8,10 @@
 
 #THIS FILE USES MEDIAPOSE'S HOLISTIC MODEL WHICH IS NOT BEING USED IN THE MAIN PROJECT
 #THE MAIN PROJECT USES MEDIAPOSE'S BLAZEPOSE (OR JUST POSE)
+
+# MediaPipe Pose Landmarker
+
+
 import mediapipe as mp
 import cv2
 import numpy as np

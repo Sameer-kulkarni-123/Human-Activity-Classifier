@@ -16,10 +16,13 @@ landmark_names = str.split(", ")
 
 csv_filename="raw-coordinates1.csv"
 
+script_dir = os.path.dirname(os.path.abspath(__file__))  # Get the directory of the script
+
+
 createFile = 0
 # createFile = 1 #uncomment this line to create the csv file
 if createFile:
-  with open(csv_filename, "a") as file:
+  with open(f"{script_dir}/../raw_skels/{csv_filename}", "a") as file:
     for i in range(len(landmark_names)):
       file.write(landmark_names[i] + ", ")
     file.write("\n")
@@ -29,7 +32,6 @@ if createFile:
 action_pattern = re.compile(r"\b(jump|kick|punch|run|sit|squat|stand|walk|wave)(_\d+)?\b",re.IGNORECASE)
 number_pattern = re.compile(r"(\d+) (\d+)")
 
-script_dir = os.path.dirname(os.path.abspath(__file__))  # Get the directory of the script
 
 validimg_path = os.path.join(script_dir, "../Action-Recognition-Dataset/source_images3/valid_images.txt")
 
@@ -85,4 +87,5 @@ for filename in df["file_name"]:
 
 # print(Y)
 df["label"] = Y
-df.to_csv("new_raw_co-ordinates1.csv", index=False)    
+# df.to_csv("new_raw_co-ordinates1.csv", index=False)    
+df.to_csv(f"{script_dir}/../raw_skels/new_raw_co-ordinates1.csv", index=False)    

@@ -25,7 +25,7 @@ Y = df["label"].values
 label_encoder = LabelEncoder()
 standard_scaler = StandardScaler()
 pca = PCA(n_components=.95)
-model = MLPClassifier(hidden_layer_sizes=(20, 30, 40), max_iter=500, verbose=True)
+model = MLPClassifier(hidden_layer_sizes=(64, 64),activation="relu", alpha=0.001, learning_rate="constant", solver="adam" ,max_iter=500, verbose=True)
 
 
 #preforming preprocessing and label encoding
@@ -43,11 +43,11 @@ model.fit(X_train, Y_train)
 os.makedirs(pkl_path, exist_ok=True)
 
 #run to create a .pkl file of the models
-if False: # change to True to create the models
-  joblib.dump(model, f"{pkl_path}/mlp_model1.pkl")
-  joblib.dump(label_encoder, f"{pkl_path}/label_encoder_model1.pkl")
-  joblib.dump(pca, f"{pkl_path}/pca_model1.pkl")
-  joblib.dump(standard_scaler, f"{pkl_path}/standard_scaler_model1.pkl")
+if True: # change to True to create the models
+  joblib.dump(model, f"{pkl_path}/mlp_model2.pkl")
+  joblib.dump(label_encoder, f"{pkl_path}/label_encoder_model2.pkl")
+  joblib.dump(pca, f"{pkl_path}/pca_model2.pkl")
+  joblib.dump(standard_scaler, f"{pkl_path}/standard_scaler_model2.pkl")
 
 
 
