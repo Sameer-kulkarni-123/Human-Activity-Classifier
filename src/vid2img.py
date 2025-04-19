@@ -56,8 +56,8 @@ def extract_frames(video_path, output_folder):
     print(f"Frames saved in folder: {output_folder}")
 
 if __name__ == "__main__":
-    vid_name = "test.mp3"
+    vid_name = "wave_3.mp4"
     video_path = os.path.join(script_dir, "../videos", vid_name)
-    output_folder = os.path.join(script_dir, "../imagesFromVids")
+    output_folder = os.path.join(script_dir, "../imagesFromVids/wave_3")
 
     extract_frames(video_path, output_folder)
