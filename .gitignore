@@ -6,7 +6,12 @@ testImgs/
 imagesFromVids/
 videos/
 ExtraSrc/
+AllModels/
+confusionMatrixALlModels/
+model/
 
 
 Action-Recognition-Dataset/
 createLabels.py
+
+accuracyAllModels.txt

@@ -73,7 +73,7 @@ for line in validimg:
             file.write(f"{point.x}, {point.y}, {point.z}, ")
           file.write("\n")
 
-df = pd.read_csv(f"{script_dir}/../raw_skels/raw-coordinates1.csv")
+df = pd.read_csv(f"{script_dir}/../raw_skels/raw-coordinates.csv")
 df = df.drop(df.columns[-1], axis=1)
 
 pattern = re.compile(r"(jump|kick|punch|run|sit|squat|stand|walk|wave)")
@@ -88,4 +88,4 @@ for filename in df["file_name"]:
 # print(Y)
 df["label"] = Y
 # df.to_csv("new_raw_co-ordinates1.csv", index=False)    
-df.to_csv(f"{script_dir}/../raw_skels/new_raw_co-ordinates1.csv", index=False)    
+df.to_csv(f"{script_dir}/../raw_skels/new_raw_co-ordinates.csv", index=False)    

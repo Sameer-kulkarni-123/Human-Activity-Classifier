@@ -11,14 +11,14 @@ pkl_path = os.path.join(script_dir, "../model")
 
 
 # imgNames = ["00160.jpg", "humanJumping.jpg", "humanKick.jpg", "humanRunning.jpg", "humanRunning1.jpg", "humanSitting.jpg", "humanSquatting.jpg", "humanWave.jpg", "humanWave1.jpg"]
-imgNames = ["00160.jpg"]
+imgNames = ["00152_40.jpg"]
 
 
 #importing all the necessary models
-standard_scaler_model = joblib.load(f"{pkl_path}/standard_scaler_model.pkl")
-loaded_model = joblib.load(f"{pkl_path}/mlp_model.pkl")
-label_encoded_loaded_model = joblib.load(f"{pkl_path}/label_encoder_model.pkl")
-pca_loaded_model = joblib.load(f"{pkl_path}/pca_model.pkl")
+standard_scaler_model = joblib.load(f"{pkl_path}/best_standard_scaler_model.pkl")
+loaded_model = joblib.load(f"{pkl_path}/best_mlp_model.pkl")
+label_encoded_loaded_model = joblib.load(f"{pkl_path}/best_label_encoder_model.pkl")
+pca_loaded_model = joblib.load(f"{pkl_path}/best_pca_model.pkl")
 
 #getting the cords of the test image
 mp_pose = mp.solutions.pose

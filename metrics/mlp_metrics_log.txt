@@ -1,0 +1,290 @@
+MLP Classifier Evaluation with Cross-Validation
+
+Model 1 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (50,), 'mlp__learning_rate': 'constant', 'mlp__solver': 'adam'}
+Accuracy: 0.7686
+Precision: 0.7745
+Recall: 0.7686
+F1 Score: 0.7690
+--------------------------------------------------
+Model 2 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (50,), 'mlp__learning_rate': 'constant', 'mlp__solver': 'sgd'}
+Accuracy: 0.7548
+Precision: 0.7617
+Recall: 0.7548
+F1 Score: 0.7564
+--------------------------------------------------
+Model 3 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (50,), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'adam'}
+Accuracy: 0.7605
+Precision: 0.7713
+Recall: 0.7605
+F1 Score: 0.7594
+--------------------------------------------------
+Model 4 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (50,), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'sgd'}
+Accuracy: 0.7393
+Precision: 0.7499
+Recall: 0.7393
+F1 Score: 0.7422
+--------------------------------------------------
+Model 5 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (20, 30, 40), 'mlp__learning_rate': 'constant', 'mlp__solver': 'adam'}
+Accuracy: 0.7301
+Precision: 0.7597
+Recall: 0.7301
+F1 Score: 0.7376
+--------------------------------------------------
+Model 6 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (20, 30, 40), 'mlp__learning_rate': 'constant', 'mlp__solver': 'sgd'}
+Accuracy: 0.7463
+Precision: 0.7566
+Recall: 0.7463
+F1 Score: 0.7472
+--------------------------------------------------
+Model 7 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (20, 30, 40), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'adam'}
+Accuracy: 0.7403
+Precision: 0.7608
+Recall: 0.7403
+F1 Score: 0.7426
+--------------------------------------------------
+Model 8 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (20, 30, 40), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'sgd'}
+Accuracy: 0.7441
+Precision: 0.7574
+Recall: 0.7441
+F1 Score: 0.7436
+--------------------------------------------------
+Model 9 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (64, 64), 'mlp__learning_rate': 'constant', 'mlp__solver': 'adam'}
+Accuracy: 0.7544
+Precision: 0.7744
+Recall: 0.7544
+F1 Score: 0.7526
+--------------------------------------------------
+Model 10 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (64, 64), 'mlp__learning_rate': 'constant', 'mlp__solver': 'sgd'}
+Accuracy: 0.7553
+Precision: 0.7661
+Recall: 0.7553
+F1 Score: 0.7572
+--------------------------------------------------
+Model 11 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (64, 64), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'adam'}
+Accuracy: 0.7409
+Precision: 0.7592
+Recall: 0.7409
+F1 Score: 0.7410
+--------------------------------------------------
+Model 12 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (64, 64), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'sgd'}
+Accuracy: 0.7474
+Precision: 0.7586
+Recall: 0.7474
+F1 Score: 0.7489
+--------------------------------------------------
+Model 13 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (50,), 'mlp__learning_rate': 'constant', 'mlp__solver': 'adam'}
+Accuracy: 0.7605
+Precision: 0.7709
+Recall: 0.7605
+F1 Score: 0.7613
+--------------------------------------------------
+Model 14 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (50,), 'mlp__learning_rate': 'constant', 'mlp__solver': 'sgd'}
+Accuracy: 0.7458
+Precision: 0.7549
+Recall: 0.7458
+F1 Score: 0.7488
+--------------------------------------------------
+Model 15 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (50,), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'adam'}
+Accuracy: 0.7662
+Precision: 0.7764
+Recall: 0.7662
+F1 Score: 0.7659
+--------------------------------------------------
+Model 16 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (50,), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'sgd'}
+Accuracy: 0.7366
+Precision: 0.7478
+Recall: 0.7366
+F1 Score: 0.7399
+--------------------------------------------------
+Model 17 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (20, 30, 40), 'mlp__learning_rate': 'constant', 'mlp__solver': 'adam'}
+Accuracy: 0.7367
+Precision: 0.7563
+Recall: 0.7367
+F1 Score: 0.7378
+--------------------------------------------------
+Model 18 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (20, 30, 40), 'mlp__learning_rate': 'constant', 'mlp__solver': 'sgd'}
+Accuracy: 0.7436
+Precision: 0.7611
+Recall: 0.7436
+F1 Score: 0.7481
+--------------------------------------------------
+Model 19 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (20, 30, 40), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'adam'}
+Accuracy: 0.7494
+Precision: 0.7651
+Recall: 0.7494
+F1 Score: 0.7508
+--------------------------------------------------
+Model 20 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (20, 30, 40), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'sgd'}
+Accuracy: 0.7405
+Precision: 0.7553
+Recall: 0.7405
+F1 Score: 0.7406
+--------------------------------------------------
+Model 21 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (64, 64), 'mlp__learning_rate': 'constant', 'mlp__solver': 'adam'}
+Accuracy: 0.7634
+Precision: 0.7764
+Recall: 0.7634
+F1 Score: 0.7623
+--------------------------------------------------
+Model 22 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (64, 64), 'mlp__learning_rate': 'constant', 'mlp__solver': 'sgd'}
+Accuracy: 0.7477
+Precision: 0.7601
+Recall: 0.7477
+F1 Score: 0.7507
+--------------------------------------------------
+Model 23 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (64, 64), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'adam'}
+Accuracy: 0.7596
+Precision: 0.7737
+Recall: 0.7596
+F1 Score: 0.7607
+--------------------------------------------------
+Model 24 Params: {'mlp__activation': 'relu', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (64, 64), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'sgd'}
+Accuracy: 0.7655
+Precision: 0.7789
+Recall: 0.7655
+F1 Score: 0.7690
+--------------------------------------------------
+Model 25 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (50,), 'mlp__learning_rate': 'constant', 'mlp__solver': 'adam'}
+Accuracy: 0.7547
+Precision: 0.7640
+Recall: 0.7547
+F1 Score: 0.7560
+--------------------------------------------------
+Model 26 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (50,), 'mlp__learning_rate': 'constant', 'mlp__solver': 'sgd'}
+Accuracy: 0.7669
+Precision: 0.7688
+Recall: 0.7669
+F1 Score: 0.7673
+--------------------------------------------------
+Model 27 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (50,), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'adam'}
+Accuracy: 0.7390
+Precision: 0.7559
+Recall: 0.7390
+F1 Score: 0.7414
+--------------------------------------------------
+Model 28 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (50,), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'sgd'}
+Accuracy: 0.7618
+Precision: 0.7649
+Recall: 0.7618
+F1 Score: 0.7623
+--------------------------------------------------
+Model 29 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (20, 30, 40), 'mlp__learning_rate': 'constant', 'mlp__solver': 'adam'}
+Accuracy: 0.7235
+Precision: 0.7425
+Recall: 0.7235
+F1 Score: 0.7242
+--------------------------------------------------
+Model 30 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (20, 30, 40), 'mlp__learning_rate': 'constant', 'mlp__solver': 'sgd'}
+Accuracy: 0.7541
+Precision: 0.7627
+Recall: 0.7541
+F1 Score: 0.7562
+--------------------------------------------------
+Model 31 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (20, 30, 40), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'adam'}
+Accuracy: 0.7567
+Precision: 0.7727
+Recall: 0.7567
+F1 Score: 0.7594
+--------------------------------------------------
+Model 32 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (20, 30, 40), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'sgd'}
+Accuracy: 0.7535
+Precision: 0.7581
+Recall: 0.7535
+F1 Score: 0.7539
+--------------------------------------------------
+Model 33 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (64, 64), 'mlp__learning_rate': 'constant', 'mlp__solver': 'adam'}
+Accuracy: 0.7682
+Precision: 0.7829
+Recall: 0.7682
+F1 Score: 0.7696
+--------------------------------------------------
+Model 34 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (64, 64), 'mlp__learning_rate': 'constant', 'mlp__solver': 'sgd'}
+Accuracy: 0.7788
+Precision: 0.7840
+Recall: 0.7788
+F1 Score: 0.7803
+--------------------------------------------------
+Model 35 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (64, 64), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'adam'}
+Accuracy: 0.7548
+Precision: 0.7689
+Recall: 0.7548
+F1 Score: 0.7548
+--------------------------------------------------
+Model 36 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.0001, 'mlp__hidden_layer_sizes': (64, 64), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'sgd'}
+Accuracy: 0.7881
+Precision: 0.7937
+Recall: 0.7881
+F1 Score: 0.7897
+--------------------------------------------------
+Model 37 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (50,), 'mlp__learning_rate': 'constant', 'mlp__solver': 'adam'}
+Accuracy: 0.7631
+Precision: 0.7744
+Recall: 0.7631
+F1 Score: 0.7644
+--------------------------------------------------
+Model 38 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (50,), 'mlp__learning_rate': 'constant', 'mlp__solver': 'sgd'}
+Accuracy: 0.7689
+Precision: 0.7717
+Recall: 0.7689
+F1 Score: 0.7696
+--------------------------------------------------
+Model 39 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (50,), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'adam'}
+Accuracy: 0.7484
+Precision: 0.7625
+Recall: 0.7484
+F1 Score: 0.7507
+--------------------------------------------------
+Model 40 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (50,), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'sgd'}
+Accuracy: 0.7630
+Precision: 0.7647
+Recall: 0.7630
+F1 Score: 0.7632
+--------------------------------------------------
+Model 41 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (20, 30, 40), 'mlp__learning_rate': 'constant', 'mlp__solver': 'adam'}
+Accuracy: 0.7319
+Precision: 0.7455
+Recall: 0.7319
+F1 Score: 0.7321
+--------------------------------------------------
+Model 42 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (20, 30, 40), 'mlp__learning_rate': 'constant', 'mlp__solver': 'sgd'}
+Accuracy: 0.7590
+Precision: 0.7658
+Recall: 0.7590
+F1 Score: 0.7603
+--------------------------------------------------
+Model 43 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (20, 30, 40), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'adam'}
+Accuracy: 0.7379
+Precision: 0.7603
+Recall: 0.7379
+F1 Score: 0.7413
+--------------------------------------------------
+Model 44 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (20, 30, 40), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'sgd'}
+Accuracy: 0.7537
+Precision: 0.7614
+Recall: 0.7537
+F1 Score: 0.7548
+--------------------------------------------------
+Model 45 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (64, 64), 'mlp__learning_rate': 'constant', 'mlp__solver': 'adam'}
+Accuracy: 0.7663
+Precision: 0.7817
+Recall: 0.7663
+F1 Score: 0.7664
+--------------------------------------------------
+Model 46 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (64, 64), 'mlp__learning_rate': 'constant', 'mlp__solver': 'sgd'}
+Accuracy: 0.7788
+Precision: 0.7839
+Recall: 0.7788
+F1 Score: 0.7800
+--------------------------------------------------
+Model 47 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (64, 64), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'adam'}
+Accuracy: 0.7705
+Precision: 0.7835
+Recall: 0.7705
+F1 Score: 0.7706
+--------------------------------------------------
+Model 48 Params: {'mlp__activation': 'tanh', 'mlp__alpha': 0.001, 'mlp__hidden_layer_sizes': (64, 64), 'mlp__learning_rate': 'adaptive', 'mlp__solver': 'sgd'}
+Accuracy: 0.7790
+Precision: 0.7850
+Recall: 0.7790
+F1 Score: 0.7804
+--------------------------------------------------

@@ -1,3 +1,33 @@
+# Download all requirements
+## in the root directory run :
+```bash
+pip install -r requirements.txt
+```
+
+#
+
+# To launch the Human activity classifier:
+## Run the ```predictFromCamera.py``` file in /src
+# OR RUN in CMD
+```bash
+cd src
+python predictFromCamera.py
+```
+
+#
+
+# Things included in this repository
+### Model used for predicting -> in /BestModel
+### confusion matrix of the model -> /confusionMatrixBestModel
+### Metrics of all the different models trained using grid search -> /metrics
+### other python files which were used in making and testing the model -> /src
+
+#
+#
+#
+# The following instructions are to train the model
+This part of ReadMe concerns with training the model, There is already a Model available for classifing in /BestModel which can be used by following the steps above
+
 # Get the training dataset
 
 [Google drive link to the dataset](https://drive.google.com/open?id=1V8rQ5QR5q5zn1NHJhhf-6xIeDdXVtYs9)

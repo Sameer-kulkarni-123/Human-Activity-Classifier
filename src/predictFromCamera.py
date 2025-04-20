@@ -1,13 +1,6 @@
 
 
-#THIS FILE USES MEDIAPOSE'S HOLISTIC MODEL WHICH IS NOT BEING USED IN THE MAIN PROJECT
-#THE MAIN PROJECT USES MEDIAPOSE'S BLAZEPOSE (OR JUST POSE)
-
-#THIS FILE USES MEDIAPOSE'S HOLISTIC MODEL WHICH IS NOT BEING USED IN THE MAIN PROJECT
-#THE MAIN PROJECT USES MEDIAPOSE'S BLAZEPOSE (OR JUST POSE)
-
-#THIS FILE USES MEDIAPOSE'S HOLISTIC MODEL WHICH IS NOT BEING USED IN THE MAIN PROJECT
-#THE MAIN PROJECT USES MEDIAPOSE'S BLAZEPOSE (OR JUST POSE)
+#THIS FILE USES MEDIAPOSE'S HOLISTIC MODEL 
 
 # MediaPipe Pose Landmarker
 
@@ -23,13 +16,13 @@ import mediapipe as mp
 
 #finding the path of the folder model
 script_dir = os.path.dirname(os.path.abspath(__file__))  # Get the directory of the script
-pkl_path = os.path.join(script_dir, "../model")
+pkl_path = os.path.join(script_dir, "../BestModel")
 
 #importing all the necessary models
-standard_scaler_model = joblib.load(f"{pkl_path}/standard_scaler_model1.pkl")
-loaded_model = joblib.load(f"{pkl_path}/mlp_model1.pkl")
-label_encoded_loaded_model = joblib.load(f"{pkl_path}/label_encoder_model1.pkl")
-pca_loaded_model = joblib.load(f"{pkl_path}/pca_model1.pkl")
+standard_scaler_model = joblib.load(f"{pkl_path}/best_standard_scaler_model.pkl")
+loaded_model = joblib.load(f"{pkl_path}/best_mlp_model.pkl")
+label_encoded_loaded_model = joblib.load(f"{pkl_path}/best_label_encoder_model.pkl")
+pca_loaded_model = joblib.load(f"{pkl_path}/best_pca_model.pkl")
 
 # Grabbing the Holistic Model from Mediapipe and
 # Initializing the Model

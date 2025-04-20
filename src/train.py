@@ -14,7 +14,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))  # Get the directory of 
 pkl_path = os.path.join(script_dir, "../model")
 
 #reading the file from dir raw_skels
-df = pd.read_csv(f"{script_dir}/../raw_skels/new_raw_co-ordinates1.csv")
+df = pd.read_csv(f"{script_dir}/../raw_skels/new_raw_co-ordinates.csv")
 
 #getting the X and Y features from the csv
 X = df.iloc[:, 1:-1].values
@@ -25,7 +25,7 @@ Y = df["label"].values
 label_encoder = LabelEncoder()
 standard_scaler = StandardScaler()
 pca = PCA(n_components=.95)
-model = MLPClassifier(hidden_layer_sizes=(64, 64),activation="relu", alpha=0.001, learning_rate="constant", solver="adam" ,max_iter=500, verbose=True)
+model = MLPClassifier(hidden_layer_sizes=(64, 64),activation="tanh", alpha=0.0001, learning_rate="adaptive", solver="sgd" ,max_iter=500, verbose=True)
 
 
 #preforming preprocessing and label encoding
@@ -44,10 +44,10 @@ os.makedirs(pkl_path, exist_ok=True)
 
 #run to create a .pkl file of the models
 if True: # change to True to create the models
-  joblib.dump(model, f"{pkl_path}/mlp_model2.pkl")
-  joblib.dump(label_encoder, f"{pkl_path}/label_encoder_model2.pkl")
-  joblib.dump(pca, f"{pkl_path}/pca_model2.pkl")
-  joblib.dump(standard_scaler, f"{pkl_path}/standard_scaler_model2.pkl")
+  joblib.dump(model, f"{pkl_path}/best_mlp_model.pkl")
+  joblib.dump(label_encoder, f"{pkl_path}/best_label_encoder_model.pkl")
+  joblib.dump(pca, f"{pkl_path}/best_pca_model.pkl")
+  joblib.dump(standard_scaler, f"{pkl_path}/best_standard_scaler_model.pkl")
 
 
 
